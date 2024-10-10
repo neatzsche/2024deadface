@@ -1,4 +1,5 @@
-FROM go:alpine
+FROM golang:alpine
 WORKDIR /src
 COPY ./src .
-ENV KILLER_CURVE_PRIVATE_KEY = "FLAG{1nv@l1d-cUrv3-atT@ck-on-ECDH-W}"
+EXPOSE 4444
+CMD [ "sh", "start.sh" ]
